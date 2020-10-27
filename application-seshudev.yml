@@ -1,0 +1,83 @@
+
+
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: "jdbc:mysql://localhost:3306/crateful_dev_db?autoreconnect=true"
+    password: "root"
+    username: "root"
+    testOnBorrow: true
+    testWhileIdle: true
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 30000
+    validationQuery: SELECT 1
+    max-active: 15
+    max-idle: 10
+    max-wait: 8000
+
+config:
+  oauth2:
+    clientid: fgs_client_id
+    clientSecret: uAV>C_nx46xK:[x`
+    # openssl genrsa -out jwt.pem 2048
+    # openssl rsa -in jwt.pem
+    privateKey: -----BEGIN RSA PRIVATE KEY-----MIIEogIBAAKCAQEA0NUR+r6ownpW+Rp3UJ8gtWrEC21xHztJiegfNWNo/8HKtbLHCAf0EqjR3Vu/YOZA/dlHtw1J9zics3o4NkTa054Sj2JdIjWAl9uaE9WNn9UC5MBcXF+KSusoDigEqd8mFahFVc1ZOR5tof0vWwkzCSXH4irlpuhVMNmNrD+U/hrUlveYc0/tT0NdzQcxHlWGVr5cbihoqonXSAKE3zyQJzCcZAnUrJ5mjxF8ik8aKSDjzoO7rrbBJC1tnzb19dpMqf9lJ66fHc5NlkMN40Gp2h6ojsfz8jpWDbh7i2OQ6UcbTf+ZW18tdbSfXBvn6CRvuQN2kKABQJQTbpO7mr8/iwIDAQABAoIBAF/wQx5K0QTnZ2VxfzcOo9w0fHQzhzCt8A7nEM9aKDa3NQVcaIuL+9lGrYNgTv+ZSGpWk9fIxx5IZ9UcZQ6pe06U5DnzGo5IvhcF0DckeLfhCD9HECdvzPy2I+S9Bcd0uO5iK9hLSp4vGHa+9i6Af23IaZfB1VdkjR6wE6H6Y9yIamaElAhaCWbi3sbW2NVZgqpfEYaiVCoTZZt8v0gi87u4PzHEKBcM0wz/DG789yGIFMpKi9W5UERGWYn8THAfCIPoNHWQ7eMDzohE0OZwBw0qvUTIaw2qPDAGpzNxuRXUypDESL8y+kH+OnLQa26jPJDfEDl1CoHqjO3nrc6H3iECgYEA726a28+BmEvy1+99OMsPdpfI7suWBNs30vXWHxIdsMVjaUtirrDX5bZzx2SGAGyI3a8J/vIuRJlebBdoLSWZDci/oAjL7AmmvTyyw3Yw525n7Ebm/jhPBKNS/4cjF8x+KYplUb/0K23lVaZekrR8sbKH7iuVkdeuOSFNopqk+wUCgYEA30howUqcoJPKXquY3pyDYg2lKdY8UYrk6aHF3YMYCZnRUvs9MEuowoorSGW/hoQtLQuVtcvCoNF+uY+DOcKWRHd4FsQH2BVDM5n8Xg6B3fWc3dHQBhoOmwesMx0JtgedPK1EbGCU3OqXGSItCh0eCfiB2XjkcgDiMHtJDx5S9U8CgYALde7hsKgSYyhHn8YNruKZmaBbldEjgF7GsU/Dgvl62afthVc+52YeL8KQ+8XSRV+zxMoksvD2BaVYZTJuXstZto89mM4yCTA7BKnF42Vp3oYI8EfkSUu2/B5f7tcGL5qmYGKDLD4CyirdE66ZNRx24QXSp7FsHrfPMkHmE6LsBQKBgD32bzOsy/h36wIIpryoPIGafco1bLnITKxVO360YZhQelmH5Twg0u1hwI8vxU3EInFMtLglmpZcbMl7/ROrX14StV3D+tVJWUPZqMJFTl7VSTn5frwiwQjewTfSCB7e0BDFmKZmywjfhRzxcgRLfkmQECDUvriwbBS+MdEjPixbAoGAP9IAe3oC5kL9xHKwaHS24aYRS2pdo2vqqy2yQR4I49/suyasMKTLVqkFOwhIxvqu9+be8ICa6ze4i1JJVAiLz0cEKiFtHholX2tlGaJ94Lb3nJcpe8TW2+zi2j0705wfdSgqrc4RGQtzZfeuVv/3t/41iRvIl6Qm7k7a6Yz6a8M=-----END RSA PRIVATE KEY-----
+    # openssl rsa -in jwt.pem -pubout
+    publicKey: -----BEGIN PUBLIC KEY-----MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0NUR+r6ownpW+Rp3UJ8gtWrEC21xHztJiegfNWNo/8HKtbLHCAf0EqjR3Vu/YOZA/dlHtw1J9zics3o4NkTa054Sj2JdIjWAl9uaE9WNn9UC5MBcXF+KSusoDigEqd8mFahFVc1ZOR5tof0vWwkzCSXH4irlpuhVMNmNrD+U/hrUlveYc0/tT0NdzQcxHlWGVr5cbihoqonXSAKE3zyQJzCcZAnUrJ5mjxF8ik8aKSDjzoO7rrbBJC1tnzb19dpMqf9lJ66fHc5NlkMN40Gp2h6ojsfz8jpWDbh7i2OQ6UcbTf+ZW18tdbSfXBvn6CRvuQN2kKABQJQTbpO7mr8/iwIDAQAB-----END PUBLIC KEY-----
+
+info:
+  app:
+    name: authserver
+    project: authserver is a service that provides an oauth token to access the resoruces
+    version: 1.0
+
+
+
+logging:
+  level:
+    org:
+      springframework:
+        jdbc:
+          core: TRACE
+
+dubbo:
+  registry:
+    id: zookeeper-registry
+    protocol: zookeeper
+    address: zookeeper://13.233.101.0:2181
+
+  # metadata-report
+  metadata-report:
+    address: zookeeper://13.233.101.0:2181
+  # dubbo related
+
+    #user module propertiese
+
+
+
+
+
+security:
+  oauth2:
+    resource:
+      jwt:
+        key-value: -----BEGIN PUBLIC KEY-----MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0NUR+r6ownpW+Rp3UJ8gtWrEC21xHztJiegfNWNo/8HKtbLHCAf0EqjR3Vu/YOZA/dlHtw1J9zics3o4NkTa054Sj2JdIjWAl9uaE9WNn9UC5MBcXF+KSusoDigEqd8mFahFVc1ZOR5tof0vWwkzCSXH4irlpuhVMNmNrD+U/hrUlveYc0/tT0NdzQcxHlWGVr5cbihoqonXSAKE3zyQJzCcZAnUrJ5mjxF8ik8aKSDjzoO7rrbBJC1tnzb19dpMqf9lJ66fHc5NlkMN40Gp2h6ojsfz8jpWDbh7i2OQ6UcbTf+ZW18tdbSfXBvn6CRvuQN2kKABQJQTbpO7mr8/iwIDAQAB-----END PUBLIC KEY-----
+
+springdoc:
+  use-fqn: true
+
+
+  # metadata-report
+
+    #db module propertiese
+    spring:
+      application:
+        name: dbintegrations
+
+      flyway:
+        url: jdbc:mysql://localhost:3306
+        schemas: crateful_dev_db
+        user: root
+        password: root
+        placeholder-replacement: false
+        validate-on-migrate: true
+        encoding: UTF-8

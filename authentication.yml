@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: authentication-server
+
+server:
+  port: 4431
+
+  protocol:
+    name: dubbo
+    port: 20880
+    accesslog: dubbo-access.log
+    provider:
+      retries: 0
+      timeout: 3000
+    monitor:
+      protocol: registry
